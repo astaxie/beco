@@ -1,0 +1,16 @@
+port = 8080
+
+[[proxys]]
+prefix = "/order"
+[proxys.backends]
+host = "http://locahost:8081"
+
+[[proxys]]
+prefix = "/shipping"
+[proxys.backends]
+host = "http://locahost:8082"
+
+[[proxys]]
+prefix = "/static"
+[proxys.backends]
+host = "static:html"
